@@ -4,7 +4,7 @@ using System.Collections;
 public class PersonController : MonoBehaviour
 {
     public float speed = 200f;
-    public float jumpForce = 500f;
+    public float jumpForce = 800f;
     private float xSpeed;
     public float acceleration, deceleration, maxSpeed;
     public bool IsGround;
