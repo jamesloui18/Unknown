@@ -108,20 +108,20 @@ public class PersonController : MonoBehaviour
             AudioManager.Instance.PlaySoundEffect(1);
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.tag == "key")
+        if (collision.gameObject.tag == "key")
         {
             Debug.Log("Player has took the key!");
             AudioManager.Instance.PlaySoundEffect(2);
             KeyScript.open = true;
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.tag == "boum")
+        if (collision.gameObject.tag == "bomb")
         {
             IsDying = true;
             Debug.Log("Player hit bomb");
             AudioManager.Instance.PlaySoundEffect(3);
             if (currentScene == 2)
-                this.transform.position = new Vector3(-6.2f, 0.5f, 0f);// need change based on player location
+                this.transform.position = new Vector3(-30.77f, 5.63f, 0);// need change based on player location
             else if (currentScene == 3)
                 this.transform.position = new Vector3(-7.6f, -0.13f, 0f);// need change based on player location
             else if (currentScene == 4)
